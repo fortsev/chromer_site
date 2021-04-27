@@ -1,10 +1,24 @@
+@font-face {
+    font-family: CenturyGothic;
+    src: url(../fonts/CenturyGothic.ttf);
+}
+@font-face {
+    font-family: CenturyGothicBold;
+    src: url(../fonts/CenturyGothic-Bold.ttf);
+}
+@font-face {
+    font-family: CenturyGothicBoldItalic;
+    src: url(../fonts/CenturyGothic-BoldItalic.ttf);
+}
+@font-face {
+    font-family: CenturyGothicItalic;
+    src: url(../fonts/CenturyGothic-Italic.ttf);
+}
 body {
     margin: 0;
     padding: 0;
-}
-.container {
-    max-width: 1120px;
-    margin: auto;
+    background-color: #1d1d1b;
+    font-family: CenturyGothic;
 }
 a {
     text-decoration: none;
@@ -44,7 +58,6 @@ a {
     max-width: 100%;
     position: relative;
     margin: auto;
-    background-color: #000;
 }
 .slider .item img {
     object-fit: cover;
@@ -72,15 +85,20 @@ a {
     background-color: rgba(0, 0, 0, 0.2);
 }
 .slider .item {
+    opacity: 1;
     animation-name: fade;
     animation-duration: 3s;
+    transition: 300ms;
 }
 @keyframes fade {
     from {
-        opacity: 0.4
+        opacity: 0.1;
     }
     to {
-        opacity: 1
+        -webkit-transition: opacity 2s;
+        -moz-transition: opacity 2s;
+        -o-transition: opacity 2s;
+        transition: opacity 2s;
     }
 }
 footer {
@@ -101,4 +119,19 @@ footer {
     align-items: center;
     margin: 0;
     padding: 0;
+}
+/*work gallery*/
+.work-gallery {
+    padding: 40px 0;
+}
+.work-gallery-list {
+
+}
+.work-gallery-list-item img{
+    max-width: 100%;
+}
+.work-gallery-list-item-title {
+    color: #c6c6c6;
+    text-align: center;
+    padding: 30px;
 }
