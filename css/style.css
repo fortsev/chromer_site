@@ -2,8 +2,13 @@ body {
     margin: 0;
     padding: 0;
 }
-header {
-
+.container {
+    max-width: 1120px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: #fff;
 }
 .head-logo {
     display: flex;
@@ -31,5 +36,69 @@ header {
 }
 .head-navigation ul li {
     margin: 0 20px;
+}
+.head-navigation ul li a {
     color: #c6c6c6;
+}
+.slider{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    background-color: #000;
+}
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+}
+.slider .previous, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.slider .item {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+footer {
+    background-color: #21211f;
+    height: 140px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: #8b8c8d;
+}
+.social-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
